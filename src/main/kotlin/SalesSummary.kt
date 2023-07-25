@@ -1,5 +1,3 @@
-package com.example.sales_summary_handler
-
 data class SalesSummary(
     val storeNumber: Int,
     val week: Int,

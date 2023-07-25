@@ -1,6 +1,3 @@
-package io
-
-import com.example.sales_summary_handler.SalesSummary
 import java.io.File
 import java.util.Scanner
 import java.util.StringTokenizer
