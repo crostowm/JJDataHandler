@@ -1,12 +1,13 @@
 package io
 
+import com.example.sales_summary_handler.SalesSummary
 import java.io.File
 import java.util.Scanner
 import java.util.StringTokenizer
 
 class SalesSummaryReader(file: File) {
     private var scanner: Scanner? = null
-    val entities = ArrayList<WeekData>()
+    val entities = ArrayList<SalesSummary>()
 
     init {
         val st = StringTokenizer(file.name.substring(0, file.name.length - 4), "_")
@@ -141,8 +142,8 @@ class SalesSummaryReader(file: File) {
                 if (storeNumber != -1) {
                     val entity = getEntity(storeNumber)
                     if (entity == null) {
-                        var ss: WeekData? = null
-                        ss = WeekData(
+                        var ss: SalesSummary? = null
+                        ss = SalesSummary(
                             storeNumber,
                             week,
                             year,
@@ -188,7 +189,7 @@ class SalesSummaryReader(file: File) {
 		}
     }
 
-    private fun getEntity(storeNumber: Int): WeekData? {
+    private fun getEntity(storeNumber: Int): SalesSummary? {
         for (ss in entities) {
             if (ss.storeNumber == storeNumber) return ss
         }
