@@ -36,7 +36,7 @@ afterEvaluate {
         publications {
             create<MavenPublication>("maven") {
                 groupId = "com.github.crostowm"
-                artifactId = "sales-summary-handler"
+                artifactId = "JJDataHandler"
                 version = "1.0"
 
                 from(components["java"])
